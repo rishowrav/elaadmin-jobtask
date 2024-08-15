@@ -1,11 +1,32 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
 import Card from "../components/Card";
 import Pagination from "../components/Pagination";
+import axios from "axios";
 
 const Home = () => {
   const [toggle, setToggle] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [datas, setDatas] = useState([]);
+
+  console.log(loading);
+
+  useEffect(() => {
+    dataFeatching();
+  }, []);
+
+  const dataFeatching = async () => {
+    try {
+      const { data } = await axios.get("product.json");
+      setLoading(true);
+      setDatas(data);
+      setLoading(false);
+    } catch (error) {
+      console.error(error);
+      setLoading(false);
+    }
+  };
 
   return (
     <main className="mx-auto container space-y-10 mb-20">
@@ -37,12 +58,15 @@ const Home = () => {
         </button>
       </section>
 
-      <section className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-      </section>
+      {loading ? (
+        <h1 className="text-4xl font-bold text-center">Loading...</h1>
+      ) : (
+        <section className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
+          {datas.map((item) => (
+            <Card key={item?.description} data={item} />
+          ))}
+        </section>
+      )}
 
       <section className="flex justify-center">
         <Pagination />
