@@ -5,9 +5,12 @@ import { authContext } from "../authProvider/AuthProvider";
 import toast from "react-hot-toast";
 
 const Login = () => {
-  const { loginEmailPassword, currentUser } = useContext(authContext);
+  const { loginEmailPassword, currentUser, googleLogin } =
+    useContext(authContext);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+
+  console.log(currentUser);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -27,6 +30,23 @@ const Login = () => {
         console.log(err);
         toast.error(err.message);
         setLoading(false);
+      });
+  };
+
+  // google login
+  const handleGoogleLogin = () => {
+    setLoading(true);
+    googleLogin()
+      .then((result) => {
+        console.log(result);
+        toast.success("Google login successful");
+        setLoading(false);
+        navigate("/");
+      })
+      .catch((err) => {
+        console.log(err);
+        setLoading(false);
+        toast.error(err.message);
       });
   };
 
@@ -92,8 +112,19 @@ const Login = () => {
 
             <hr />
             <div>
-              <button className="btn  w-full">
-                <FcGoogle className="text-xl" /> <span>Log in with Google</span>
+              <button
+                disabled={loading}
+                className="btn w-full"
+                onClick={handleGoogleLogin}
+              >
+                {loading ? (
+                  "Loading..."
+                ) : (
+                  <span className="flex items-center gap-2">
+                    <FcGoogle className="text-xl" />{" "}
+                    <span>Log in with Google</span>
+                  </span>
+                )}
               </button>
             </div>
 

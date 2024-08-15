@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 
 const Header = () => {
-  const { logOut } = useContext(authContext);
+  const { logOut, currentUser } = useContext(authContext);
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -34,7 +34,9 @@ const Header = () => {
               <div className="w-10 rounded-full">
                 <img
                   alt="Tailwind CSS Navbar component"
-                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                  src={
+                    currentUser?.photoURL ? currentUser?.photoURL : "avatar.jpg"
+                  }
                 />
               </div>
             </div>

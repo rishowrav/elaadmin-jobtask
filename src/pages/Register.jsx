@@ -2,6 +2,8 @@ import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { authContext } from "../authProvider/AuthProvider";
 import toast from "react-hot-toast";
+import { updateProfile } from "firebase/auth";
+import { auth } from "../firebase/firebase.config";
 
 const Register = () => {
   const { createEmailPassword, currentUser } = useContext(authContext);
@@ -19,9 +21,22 @@ const Register = () => {
     createEmailPassword(email, password)
       .then((userCredentials) => {
         console.log(userCredentials.user);
-        toast.success("Registerd");
-        navigate("/");
-        setLoading(false);
+
+        // set Profile pic and Name
+        updateProfile(auth.currentUser, {
+          displayName: name,
+          photoURL: photo,
+        })
+          .then(() => {
+            toast.success("Registerd");
+            navigate("/");
+            setLoading(false);
+          })
+          .catch((error) => {
+            console.log(err);
+            toast.error(err.message);
+            setLoading(false);
+          });
       })
       .catch((err) => {
         console.log(err);
