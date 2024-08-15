@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
   return (
@@ -50,14 +52,21 @@ const Login = () => {
               </div>
             </form>
 
+            <hr />
+            <div>
+              <button className="btn  w-full">
+                <FcGoogle className="text-xl" /> <span>Log in with Google</span>
+              </button>
+            </div>
+
             <p className="text-sm font-light text-gray-500">
               Don’t have an account yet?{" "}
-              <a
-                href="#"
+              <Link
                 className="font-medium text-primary-600 hover:underline "
+                to="/register"
               >
                 Register
-              </a>
+              </Link>
             </p>
           </div>
         </div>
