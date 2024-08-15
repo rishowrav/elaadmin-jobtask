@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
 import Card from "../components/Card";
+import Pagination from "../components/Pagination";
 
 const Home = () => {
   const [toggle, setToggle] = useState(false);
@@ -41,6 +42,10 @@ const Home = () => {
         <Card />
         <Card />
         <Card />
+      </section>
+
+      <section className="flex justify-center">
+        <Pagination />
       </section>
     </main>
   );
