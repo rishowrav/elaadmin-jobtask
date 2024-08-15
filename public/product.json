@@ -1,200 +1,371 @@
 [
     {
-        "product_name": "Authority",
-        "product_img": "https://dummyimage.com/447x845",
-        "description": "Month author by age card assume.",
-        "price": 251.66,
-        "category": "Furniture",
-        "ratings": 1,
-        "product_creating_date": "2024-08-15T03:07:42.735070"
+        "product_name": "iPhone 12 Pro",
+        "product_img": "https://dummyimage.com/600x400",
+        "description": "Experience the next level of performance with the iPhone 12 Pro.",
+        "price": 999.99,
+        "category": "Iphone",
+        "ratings": 5,
+        "product_creating_date": "2024-08-15T00:00:00.000Z"
     },
     {
-        "product_name": "Choice",
-        "product_img": "https://www.lorempixel.com/958/322",
-        "description": "Choose west special feeling.",
-        "price": 312.27,
-        "category": "Toys",
-        "ratings": 1,
-        "product_creating_date": "2024-08-15T03:07:42.735146"
-    },
-    {
-        "product_name": "Total",
-        "product_img": "https://placekitten.com/173/366",
-        "description": "Almost safe result at.",
-        "price": 23.75,
-        "category": "Furniture",
-        "ratings": 1,
-        "product_creating_date": "2024-08-15T03:07:42.735216"
-    },
-    {
-        "product_name": "Pretty",
-        "product_img": "https://www.lorempixel.com/191/606",
-        "description": "Crime relationship mean lawyer main.",
-        "price": 73.87,
-        "category": "Electronics",
+        "product_name": "iPhone 12",
+        "product_img": "https://dummyimage.com/600x400",
+        "description": "The iPhone 12 features a new design and improved performance.",
+        "price": 799.99,
+        "category": "Iphone",
         "ratings": 4,
-        "product_creating_date": "2024-08-15T03:07:42.735270"
+        "product_creating_date": "2024-08-15T00:00:00.000Z"
     },
     {
-        "product_name": "Result",
-        "product_img": "https://dummyimage.com/639x528",
-        "description": "Especially artist bar ten five civil collection grow.",
-        "price": 276.99,
-        "category": "Toys",
+        "product_name": "iPhone 11 Pro",
+        "product_img": "https://dummyimage.com/600x400",
+        "description": "Capture stunning photos and videos with the iPhone 11 Pro.",
+        "price": 899.99,
+        "category": "Iphone",
         "ratings": 5,
-        "product_creating_date": "2024-08-15T03:07:42.735322"
+        "product_creating_date": "2024-08-15T00:00:00.000Z"
     },
     {
-        "product_name": "Effort",
-        "product_img": "https://placekitten.com/187/321",
-        "description": "Although quite fine detail the about forward.",
-        "price": 257.64,
-        "category": "Books",
-        "ratings": 5,
-        "product_creating_date": "2024-08-15T03:07:42.735373"
-    },
-    {
-        "product_name": "Nice",
-        "product_img": "https://dummyimage.com/786x277",
-        "description": "Think again job medical.",
-        "price": 142.97,
-        "category": "Books",
-        "ratings": 3,
-        "product_creating_date": "2024-08-15T03:07:42.735425"
-    },
-    {
-        "product_name": "Believe",
-        "product_img": "https://placekitten.com/312/908",
-        "description": "Build theory great teach space sing material.",
-        "price": 481.85,
-        "category": "Clothing",
-        "ratings": 5,
-        "product_creating_date": "2024-08-15T03:07:42.735476"
-    },
-    {
-        "product_name": "Cold",
-        "product_img": "https://dummyimage.com/982x440",
-        "description": "Mouth five should start partner account scene.",
-        "price": 349.73,
-        "category": "Books",
-        "ratings": 5,
-        "product_creating_date": "2024-08-15T03:07:42.735528"
-    },
-    {
-        "product_name": "Feeling",
-        "product_img": "https://www.lorempixel.com/791/77",
-        "description": "Man him church produce positive enter.",
-        "price": 269.82,
-        "category": "Books",
+        "product_name": "iPhone 11",
+        "product_img": "https://dummyimage.com/600x400",
+        "description": "The iPhone 11 offers great performance and value.",
+        "price": 599.99,
+        "category": "Iphone",
         "ratings": 4,
-        "product_creating_date": "2024-08-15T03:07:42.735579"
+        "product_creating_date": "2024-08-15T00:00:00.000Z"
     },
     {
-        "product_name": "Tax",
-        "product_img": "https://dummyimage.com/999x184",
-        "description": "Kid turn doctor stand crime.",
-        "price": 168.71,
-        "category": "Books",
-        "ratings": 1,
-        "product_creating_date": "2024-08-15T03:07:42.735630"
-    },
-    {
-        "product_name": "None",
-        "product_img": "https://placekitten.com/456/312",
-        "description": "Sometimes guy like one project way become.",
-        "price": 99.05,
-        "category": "Sports",
-        "ratings": 3,
-        "product_creating_date": "2024-08-15T03:07:42.735680"
-    },
-    {
-        "product_name": "Offer",
-        "product_img": "https://dummyimage.com/965x344",
-        "description": "Happy development win enter but smile present.",
-        "price": 103.45,
-        "category": "Books",
-        "ratings": 3,
-        "product_creating_date": "2024-08-15T03:07:42.735733"
-    },
-    {
-        "product_name": "Box",
-        "product_img": "https://placekitten.com/551/447",
-        "description": "Care next reality white.",
-        "price": 325.5,
-        "category": "Books",
-        "ratings": 3,
-        "product_creating_date": "2024-08-15T03:07:42.735788"
-    },
-    {
-        "product_name": "Yard",
-        "product_img": "https://www.lorempixel.com/242/36",
-        "description": "Everything teach perform magazine give collection alone.",
-        "price": 422.27,
-        "category": "Furniture",
-        "ratings": 2,
-        "product_creating_date": "2024-08-15T03:07:42.735842"
-    },
-    {
-        "product_name": "Vote",
-        "product_img": "https://placekitten.com/204/191",
-        "description": "Size finally walk some represent born.",
-        "price": 245.31,
-        "category": "Books",
-        "ratings": 3,
-        "product_creating_date": "2024-08-15T03:07:42.735898"
-    },
-    {
-        "product_name": "Serious",
-        "product_img": "https://dummyimage.com/606x741",
-        "description": "Star mission institution special discuss.",
-        "price": 29.37,
-        "category": "Clothing",
-        "ratings": 5,
-        "product_creating_date": "2024-08-15T03:07:42.735949"
-    },
-    {
-        "product_name": "Wait",
-        "product_img": "https://www.lorempixel.com/1001/364",
-        "description": "Model toward accept hand certainly old board beat.",
-        "price": 403.4,
-        "category": "Groceries",
-        "ratings": 1,
-        "product_creating_date": "2024-08-15T03:07:42.736001"
-    },
-    {
-        "product_name": "Year",
-        "product_img": "https://dummyimage.com/1000x533",
-        "description": "Edge inside environment single.",
-        "price": 386.21,
-        "category": "Clothing",
-        "ratings": 1,
-        "product_creating_date": "2024-08-15T03:07:42.736052"
-    },
-    {
-        "product_name": "Degree",
-        "product_img": "https://placekitten.com/171/304",
-        "description": "Service way dark tree may agency join.",
-        "price": 203.87,
-        "category": "Clothing",
-        "ratings": 3,
-        "product_creating_date": "2024-08-15T03:07:42.736103"
-    },
-    {
-        "product_name": "Miss",
-        "product_img": "https://dummyimage.com/764x512",
-        "description": "Media article imagine must top important change.",
-        "price": 489.14,
-        "category": "Clothing",
+        "product_name": "iPhone SE",
+        "product_img": "https://dummyimage.com/600x400",
+        "description": "The iPhone SE combines powerful performance with a compact design.",
+        "price": 399.99,
+        "category": "Iphone",
         "ratings": 4,
-        "product_creating_date": "2024-08-15T03:07:42.736155"
+        "product_creating_date": "2024-08-15T00:00:00.000Z"
     },
     {
-        "product_name": "Bag",
-        "product_img": "https://dummyimage.com/555x853",
-        "description": "Page moment among pick power rather.",
-        "price": 44.94,
-        "category": "Clothing",
-        "ratings": 2,
-        "product_creating_date": "2024-08-15T03:07:42.736205"
+        "product_name": "iPhone XR",
+        "product_img": "https://dummyimage.com/600x400",
+        "description": "The iPhone XR offers a stunning display and great performance.",
+        "price": 499.99,
+        "category": "Iphone",
+        "ratings": 4,
+        "product_creating_date": "2024-08-15T00:00:00.000Z"
+    },
+    {
+        "product_name": "iPhone XS",
+        "product_img": "https://dummyimage.com/600x400",
+        "description": "The iPhone XS features advanced technology and a sleek design.",
+        "price": 899.99,
+        "category": "Iphone",
+        "ratings": 5,
+        "product_creating_date": "2024-08-15T00:00:00.000Z"
+    },
+    {
+        "product_name": "iPhone X",
+        "product_img": "https://dummyimage.com/600x400",
+        "description": "The iPhone X revolutionized smartphone design with its edge-to-edge display.",
+        "price": 799.99,
+        "category": "Iphone",
+        "ratings": 5,
+        "product_creating_date": "2024-08-15T00:00:00.000Z"
+    },
+    {
+        "product_name": "iPhone 8",
+        "product_img": "https://dummyimage.com/600x400",
+        "description": "The iPhone 8 offers a great balance of performance and value.",
+        "price": 499.99,
+        "category": "Iphone",
+        "ratings": 4,
+        "product_creating_date": "2024-08-15T00:00:00.000Z"
+    },
+    {
+        "product_name": "iPhone 7",
+        "product_img": "https://dummyimage.com/600x400",
+        "description": "The iPhone 7 features a durable design and great performance.",
+        "price": 399.99,
+        "category": "Iphone",
+        "ratings": 4,
+        "product_creating_date": "2024-08-15T00:00:00.000Z"
+    },
+    {
+        "product_name": "Samsung Galaxy S21",
+        "product_img": "https://dummyimage.com/600x400",
+        "description": "Experience the ultimate performance with the Samsung Galaxy S21.",
+        "price": 799.99,
+        "category": "Samsung",
+        "ratings": 5,
+        "product_creating_date": "2024-08-15T00:00:00.000Z"
+    },
+    {
+        "product_name": "Samsung Galaxy Note 20",
+        "product_img": "https://dummyimage.com/600x400",
+        "description": "The Samsung Galaxy Note 20 is perfect for productivity and creativity.",
+        "price": 999.99,
+        "category": "Samsung",
+        "ratings": 4,
+        "product_creating_date": "2024-08-15T00:00:00.000Z"
+    },
+    {
+        "product_name": "Samsung Galaxy A52",
+        "product_img": "https://dummyimage.com/600x400",
+        "description": "The Samsung Galaxy A52 offers a great balance of features and value.",
+        "price": 499.99,
+        "category": "Samsung",
+        "ratings": 4,
+        "product_creating_date": "2024-08-15T00:00:00.000Z"
+    },
+    {
+        "product_name": "Samsung Galaxy S20",
+        "product_img": "https://dummyimage.com/600x400",
+        "description": "Experience the next level of innovation with the Samsung Galaxy S20.",
+        "price": 699.99,
+        "category": "Samsung",
+        "ratings": 5,
+        "product_creating_date": "2024-08-15T00:00:00.000Z"
+    },
+    {
+        "product_name": "Samsung Galaxy Z Fold 2",
+        "product_img": "https://dummyimage.com/600x400",
+        "description": "The Samsung Galaxy Z Fold 2 offers a unique foldable design and top performance.",
+        "price": 1499.99,
+        "category": "Samsung",
+        "ratings": 5,
+        "product_creating_date": "2024-08-15T00:00:00.000Z"
+    },
+    {
+        "product_name": "Samsung Galaxy A32",
+        "product_img": "https://dummyimage.com/600x400",
+        "description": "The Samsung Galaxy A32 delivers impressive features at an affordable price.",
+        "price": 299.99,
+        "category": "Samsung",
+        "ratings": 4,
+        "product_creating_date": "2024-08-15T00:00:00.000Z"
+    },
+    {
+        "product_name": "Samsung Galaxy S10",
+        "product_img": "https://dummyimage.com/600x400",
+        "description": "The Samsung Galaxy S10 is a classic smartphone with reliable performance.",
+        "price": 599.99,
+        "category": "Samsung",
+        "ratings": 4,
+        "product_creating_date": "2024-08-15T00:00:00.000Z"
+    },
+    {
+        "product_name": "Samsung Galaxy M31",
+        "product_img": "https://dummyimage.com/600x400",
+        "description": "The Samsung Galaxy M31 offers a massive battery and great performance.",
+        "price": 249.99,
+        "category": "Samsung",
+        "ratings": 4,
+        "product_creating_date": "2024-08-15T00:00:00.000Z"
+    },
+    {
+        "product_name": "Samsung Galaxy A71",
+        "product_img": "https://dummyimage.com/600x400",
+        "description": "The Samsung Galaxy A71 combines style and performance in one package.",
+        "price": 399.99,
+        "category": "Samsung",
+        "ratings": 4,
+        "product_creating_date": "2024-08-15T00:00:00.000Z"
+    },
+    {
+        "product_name": "Samsung Galaxy S9",
+        "product_img": "https://dummyimage.com/600x400",
+        "description": "The Samsung Galaxy S9 delivers a great camera experience and solid performance.",
+        "price": 349.99,
+        "category": "Samsung",
+        "ratings": 4,
+        "product_creating_date": "2024-08-15T00:00:00.000Z"
+    },
+    {
+        "product_name": "Oppo Find X3 Pro",
+        "product_img": "https://dummyimage.com/600x400",
+        "description": "Oppo Find X3 Pro offers a revolutionary camera system and stunning display.",
+        "price": 1099.99,
+        "category": "Oppo",
+        "ratings": 5,
+        "product_creating_date": "2024-08-15T00:00:00.000Z"
+    },
+    {
+        "product_name": "Oppo Reno6 Pro",
+        "product_img": "https://dummyimage.com/600x400",
+        "description": "Oppo Reno6 Pro combines sleek design with powerful performance.",
+        "price": 799.99,
+        "category": "Oppo",
+        "ratings": 4,
+        "product_creating_date": "2024-08-15T00:00:00.000Z"
+    },
+    {
+        "product_name": "Oppo A94",
+        "product_img": "https://dummyimage.com/600x400",
+        "description": "Oppo A94 is a versatile smartphone with impressive features and a great price.",
+        "price": 399.99,
+        "category": "Oppo",
+        "ratings": 4,
+        "product_creating_date": "2024-08-15T00:00:00.000Z"
+    },
+    {
+        "product_name": "Oppo F19 Pro+",
+        "product_img": "https://dummyimage.com/600x400",
+        "description": "Oppo F19 Pro+ offers advanced photography capabilities and fast performance.",
+        "price": 499.99,
+        "category": "Oppo",
+        "ratings": 4,
+        "product_creating_date": "2024-08-15T00:00:00.000Z"
+    },
+    {
+        "product_name": "Oppo A74 5G",
+        "product_img": "https://dummyimage.com/600x400",
+        "description": "Oppo A74 5G provides seamless connectivity and smooth performance.",
+        "price": 299.99,
+        "category": "Oppo",
+        "ratings": 4,
+        "product_creating_date": "2024-08-15T00:00:00.000Z"
+    },
+    {
+        "product_name": "Oppo K9 5G",
+        "product_img": "https://dummyimage.com/600x400",
+        "description": "Oppo K9 5G is designed for high-speed performance and efficient multitasking.",
+        "price": 349.99,
+        "category": "Oppo",
+        "ratings": 4,
+        "product_creating_date": "2024-08-15T00:00:00.000Z"
+    },
+    {
+        "product_name": "Oppo Reno5 Pro",
+        "product_img": "https://dummyimage.com/600x400",
+        "description": "Oppo Reno5 Pro offers an exceptional camera experience and smooth performance.",
+        "price": 649.99,
+        "category": "Oppo",
+        "ratings": 4,
+        "product_creating_date": "2024-08-15T00:00:00.000Z"
+    },
+    {
+        "product_name": "Oppo A15",
+        "product_img": "https://dummyimage.com/600x400",
+        "description": "Oppo A15 provides great value with its reliable performance and affordability.",
+        "price": 149.99,
+        "category": "Oppo",
+        "ratings": 3,
+        "product_creating_date": "2024-08-15T00:00:00.000Z"
+    },
+    {
+        "product_name": "Oppo A53",
+        "product_img": "https://dummyimage.com/600x400",
+        "description": "Oppo A53 offers a smooth display and long battery life at a great price.",
+        "price": 249.99,
+        "category": "Oppo",
+        "ratings": 4,
+        "product_creating_date": "2024-08-15T00:00:00.000Z"
+    },
+    {
+        "product_name": "Oppo F17",
+        "product_img": "https://dummyimage.com/600x400",
+        "description": "Oppo F17 features a stylish design and balanced performance.",
+        "price": 299.99,
+        "category": "Oppo",
+        "ratings": 4,
+        "product_creating_date": "2024-08-15T00:00:00.000Z"
+    },
+    {
+        "product_name": "Google Pixel 6 Pro",
+        "product_img": "https://dummyimage.com/600x400",
+        "description": "The Google Pixel 6 Pro offers cutting-edge technology with an incredible camera.",
+        "price": 1099.99,
+        "category": "Google Pixel",
+        "ratings": 5,
+        "product_creating_date": "2024-08-15T00:00:00.000Z"
+    },
+    {
+        "product_name": "Google Pixel 6",
+        "product_img": "https://dummyimage.com/600x400",
+        "description": "The Google Pixel 6 features a powerful processor and stunning display.",
+        "price": 899.99,
+        "category": "Google Pixel",
+        "ratings": 4,
+        "product_creating_date": "2024-08-15T00:00:00.000Z"
+    },
+    {
+        "product_name": "Google Pixel 5a",
+        "product_img": "https://dummyimage.com/600x400",
+        "description": "The Google Pixel 5a offers great performance at an affordable price.",
+        "price": 499.99,
+        "category": "Google Pixel",
+        "ratings": 4,
+        "product_creating_date": "2024-08-15T00:00:00.000Z"
+    },
+    {
+        "product_name": "Google Pixel 5",
+        "product_img": "https://dummyimage.com/600x400",
+        "description": "The Google Pixel 5 is a compact and powerful smartphone with excellent camera features.",
+        "price": 699.99,
+        "category": "Google Pixel",
+        "ratings": 4,
+        "product_creating_date": "2024-08-15T00:00:00.000Z"
+    },
+    {
+        "product_name": "Google Pixel 4a 5G",
+        "product_img": "https://dummyimage.com/600x400",
+        "description": "The Google Pixel 4a 5G combines great performance with 5G connectivity.",
+        "price": 599.99,
+        "category": "Google Pixel",
+        "ratings": 4,
+        "product_creating_date": "2024-08-15T00:00:00.000Z"
+    },
+    {
+        "product_name": "Google Pixel 4 XL",
+        "product_img": "https://dummyimage.com/600x400",
+        "description": "The Google Pixel 4 XL offers a larger display and advanced features.",
+        "price": 899.99,
+        "category": "Google Pixel",
+        "ratings": 4,
+        "product_creating_date": "2024-08-15T00:00:00.000Z"
+    },
+    {
+        "product_name": "Google Pixel 4",
+        "product_img": "https://dummyimage.com/600x400",
+        "description": "The Google Pixel 4 is known for its smooth performance and great camera.",
+        "price": 799.99,
+        "category": "Google Pixel",
+        "ratings": 4,
+        "product_creating_date": "2024-08-15T00:00:00.000Z"
+    },
+    {
+        "product_name": "Google Pixel 3a",
+        "product_img": "https://dummyimage.com/600x400",
+        "description": "The Google Pixel 3a provides an excellent camera experience at a budget price.",
+        "price": 399.99,
+        "category": "Google Pixel",
+        "ratings": 4,
+        "product_creating_date": "2024-08-15T00:00:00.000Z"
+    },
+    {
+        "product_name": "Google Pixel 3 XL",
+        "product_img": "https://dummyimage.com/600x400",
+        "description": "The Google Pixel 3 XL offers a larger display and top-notch performance.",
+        "price": 699.99,
+        "category": "Google Pixel",
+        "ratings": 4,
+        "product_creating_date": "2024-08-15T00:00:00.000Z"
+    },
+    {
+        "product_name": "Google Pixel 3",
+        "product_img": "https://dummyimage.com/600x400",
+        "description": "The Google Pixel 3 is a compact smartphone with excellent camera capabilities.",
+        "price": 599.99,
+        "category": "Google Pixel",
+        "ratings": 4,
+        "product_creating_date": "2024-08-15T00:00:00.000Z"
     }
 ]
+
+
+
+
+
+
+
+
+
