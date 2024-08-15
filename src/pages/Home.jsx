@@ -18,12 +18,14 @@ const Home = () => {
 
   useEffect(() => {
     dataFeatching();
-  }, [toggle, category]);
+  }, [toggle, category, search]);
 
   const dataFeatching = async () => {
     try {
       const { data } = await axiosPublic.get(
-        `/products?sort=${toggle ? "asc" : "desc"}&category=${category}`
+        `/products?sort=${
+          toggle ? "asc" : "desc"
+        }&category=${category}&search=${search}`
       );
       setLoading(true);
       setDatas(data);
@@ -44,7 +46,11 @@ const Home = () => {
           <ul className="menu font-semibold dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
             <li>
               <a
-                className={`${category === "" ? "bg-gray-300" : ""}`}
+                className={`${
+                  category === ""
+                    ? "bg-gray-500 text-white hover:text-black "
+                    : ""
+                }`}
                 onClick={() => setCategory("")}
               >
                 All
@@ -52,7 +58,11 @@ const Home = () => {
             </li>
             <li>
               <a
-                className={`${category === "Iphone" ? "bg-gray-300" : ""}`}
+                className={`${
+                  category === "Iphone"
+                    ? "bg-gray-500 text-white hover:text-black "
+                    : ""
+                }`}
                 onClick={() => setCategory("Iphone")}
               >
                 Iphone
@@ -60,7 +70,11 @@ const Home = () => {
             </li>
             <li>
               <a
-                className={`${category === "Samsung" ? "bg-gray-300" : ""}`}
+                className={`${
+                  category === "Samsung"
+                    ? "bg-gray-500 text-white hover:text-black"
+                    : ""
+                }`}
                 onClick={() => setCategory("Samsung")}
               >
                 Samsung Galaxy
@@ -68,7 +82,11 @@ const Home = () => {
             </li>
             <li>
               <a
-                className={`${category === "Oppo" ? "bg-gray-300" : ""}`}
+                className={`${
+                  category === "Oppo"
+                    ? "bg-gray-500 text-white hover:text-black"
+                    : ""
+                }`}
                 onClick={() => setCategory("Oppo")}
               >
                 Oppo
@@ -77,7 +95,9 @@ const Home = () => {
             <li>
               <a
                 className={`${
-                  category === "Google Pixel" ? "bg-gray-300" : ""
+                  category === "Google Pixel"
+                    ? "bg-gray-500 text-white hover:text-black"
+                    : ""
                 }`}
                 onClick={() => setCategory("Google Pixel")}
               >
