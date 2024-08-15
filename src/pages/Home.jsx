@@ -4,19 +4,27 @@ import { IoSearch } from "react-icons/io5";
 import Card from "../components/Card";
 import Pagination from "../components/Pagination";
 import axios from "axios";
+import useAxiosPublic from "../hooks/useAxiosPublic";
 
 const Home = () => {
   const [toggle, setToggle] = useState(false);
   const [loading, setLoading] = useState(true);
   const [datas, setDatas] = useState([]);
+  const [category, setCategory] = useState("");
+  const [search, setSearch] = useState("");
+  const axiosPublic = useAxiosPublic();
+
+  console.log(search);
 
   useEffect(() => {
     dataFeatching();
-  }, []);
+  }, [toggle, category]);
 
   const dataFeatching = async () => {
     try {
-      const { data } = await axios.get("product.json");
+      const { data } = await axiosPublic.get(
+        `/products?sort=${toggle ? "asc" : "desc"}&category=${category}`
+      );
       setLoading(true);
       setDatas(data);
       setLoading(false);
@@ -33,19 +41,60 @@ const Home = () => {
           <summary className="btn  w-full  btn-accent text-lg flex items-center justify-center ">
             Categorize <FaChevronDown />
           </summary>
-          <ul className="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+          <ul className="menu font-semibold dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
             <li>
-              <a>Item 1</a>
+              <a
+                className={`${category === "" ? "bg-gray-300" : ""}`}
+                onClick={() => setCategory("")}
+              >
+                All
+              </a>
             </li>
             <li>
-              <a>Item 2</a>
+              <a
+                className={`${category === "Iphone" ? "bg-gray-300" : ""}`}
+                onClick={() => setCategory("Iphone")}
+              >
+                Iphone
+              </a>
+            </li>
+            <li>
+              <a
+                className={`${category === "Samsung" ? "bg-gray-300" : ""}`}
+                onClick={() => setCategory("Samsung")}
+              >
+                Samsung Galaxy
+              </a>
+            </li>
+            <li>
+              <a
+                className={`${category === "Oppo" ? "bg-gray-300" : ""}`}
+                onClick={() => setCategory("Oppo")}
+              >
+                Oppo
+              </a>
+            </li>
+            <li>
+              <a
+                className={`${
+                  category === "Google Pixel" ? "bg-gray-300" : ""
+                }`}
+                onClick={() => setCategory("Google Pixel")}
+              >
+                Google Pixel
+              </a>
             </li>
           </ul>
         </details>
 
         <label className="input input-bordered  flex items-center gap-4 flex-1">
           <IoSearch className="text-2xl text-gray-500" />
-          <input type="text" className="grow h-12" placeholder="Search..." />
+          <input
+            onChange={(e) => setSearch(e.target.value)}
+            type="text"
+            className="grow h-12"
+            placeholder="Search..."
+          />
         </label>
 
         <button

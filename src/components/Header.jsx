@@ -24,7 +24,7 @@ const Header = () => {
         <div className="flex-1">
           <img className="w-32" src="logo.webp" alt="" />
         </div>
-        <div className="flex-none">
+        <div className="flex items-center gap-1">
           <div className="dropdown dropdown-end">
             <div
               tabIndex={0}
@@ -60,6 +60,12 @@ const Header = () => {
                 <a>Logout</a>
               </li>
             </ul>
+          </div>
+          <div>
+            <h6 className="font-semibold text-xs ">
+              {currentUser?.displayName}
+            </h6>
+            <p className="text-xs text-gray-400">{currentUser?.email}</p>
           </div>
         </div>
       </div>
