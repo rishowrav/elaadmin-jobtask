@@ -10,8 +10,6 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  console.log(currentUser);
-
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);

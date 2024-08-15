@@ -13,16 +13,18 @@ export const authContext = createContext();
 
 const AuthProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const provider = new GoogleAuthProvider();
 
   // Register authencation
   const createEmailPassword = (email, password) => {
+    setIsLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
   // Login authentication
   const loginEmailPassword = (email, password) => {
+    setIsLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
@@ -31,8 +33,10 @@ const AuthProvider = ({ children }) => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         setCurrentUser(user);
+        setIsLoading(false);
       } else {
         setCurrentUser("");
+        setIsLoading(false);
       }
     });
 
@@ -43,11 +47,13 @@ const AuthProvider = ({ children }) => {
 
   // Logout
   const logOut = () => {
+    setIsLoading(true);
     return signOut(auth);
   };
 
   // Login with Google
   const googleLogin = () => {
+    setIsLoading(true);
     return signInWithPopup(auth, provider);
   };
 
