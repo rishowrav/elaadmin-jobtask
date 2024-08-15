@@ -9,9 +9,9 @@ const Home = () => {
 
   return (
     <main className="mx-auto container space-y-10 mb-20">
-      <section className="flex lg:flex-row flex-col justify-between gap-10 mt-10">
+      <section className="flex lg:flex-row flex-col justify-between lg:gap-10 gap-4 mt-10 mx-auto lg:w-[800px] ">
         <details className="dropdown">
-          <summary className="btn btn-lg w-full  btn-accent text-xl flex items-center justify-center ">
+          <summary className="btn  w-full  btn-accent text-lg flex items-center justify-center ">
             Categorize <FaChevronDown />
           </summary>
           <ul className="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
@@ -24,14 +24,14 @@ const Home = () => {
           </ul>
         </details>
 
-        <label className="input input-bordered input-lg  flex items-center gap-4 flex-1">
+        <label className="input input-bordered  flex items-center gap-4 flex-1">
           <IoSearch className="text-2xl text-gray-500" />
-          <input type="text" className="grow h-16" placeholder="Search..." />
+          <input type="text" className="grow h-12" placeholder="Search..." />
         </label>
 
         <button
           onClick={() => setToggle(!toggle)}
-          className="btn btn-info btn-lg"
+          className="btn text-lg btn-info "
         >
           Price: {toggle ? "Low to High" : "High to Low"}
         </button>
