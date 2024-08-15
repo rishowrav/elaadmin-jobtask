@@ -1,4 +1,23 @@
+import { useContext } from "react";
+import { authContext } from "../authProvider/AuthProvider";
+import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
+
 const Header = () => {
+  const { logOut } = useContext(authContext);
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logOut()
+      .then(() => {
+        navigate("/login");
+        toast("logout");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
     <nav className="bg-base-100 shadow-md">
       <div className="navbar mx-auto container ">
@@ -32,7 +51,10 @@ const Header = () => {
               <li>
                 <a>Settings</a>
               </li>
-              <li>
+              <li
+                onClick={handleLogout}
+                className="bg-red-500 text-white rounded-lg active:bg-red-300"
+              >
                 <a>Logout</a>
               </li>
             </ul>

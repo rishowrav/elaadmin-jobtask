@@ -10,8 +10,6 @@ const Home = () => {
   const [loading, setLoading] = useState(true);
   const [datas, setDatas] = useState([]);
 
-  console.log(loading);
-
   useEffect(() => {
     dataFeatching();
   }, []);

@@ -1,8 +1,35 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
+import { authContext } from "../authProvider/AuthProvider";
+import toast from "react-hot-toast";
 
 const Login = () => {
+  const { loginEmailPassword, currentUser } = useContext(authContext);
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+
+    loginEmailPassword(email, password)
+      .then((userCredentials) => {
+        console.log(userCredentials.user);
+        toast.success("login successful");
+        navigate("/");
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.log(err);
+        toast.error(err.message);
+        setLoading(false);
+      });
+  };
+
   return (
     <section className="bg-gray-50">
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
@@ -14,23 +41,30 @@ const Login = () => {
             <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl ">
               Login in to your account
             </h1>
-            <form className="space-y-4 md:space-y-6" action="#">
+            <form
+              onSubmit={handleSubmit}
+              className="space-y-4 md:space-y-6"
+              action="#"
+            >
               <div>
-                <label for="email" className="block mb-2 text-sm font-medium">
+                <label
+                  htmlFor="email"
+                  className="block mb-2 text-sm font-medium"
+                >
                   Your email
                 </label>
                 <input
+                  required
                   type="email"
                   name="email"
                   id="email"
                   className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                   placeholder="name@company.com"
-                  required=""
                 />
               </div>
               <div>
                 <label
-                  for="password"
+                  htmlFor="password"
                   className="block mb-2 text-sm font-medium text-gray-900"
                 >
                   Password
@@ -41,13 +75,17 @@ const Login = () => {
                   id="password"
                   placeholder="••••••••"
                   className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                  required=""
+                  required
                 />
               </div>
 
               <div>
-                <button className="btn btn-accent w-full" type="submit">
-                  Login
+                <button
+                  disabled={loading}
+                  className="btn btn-accent w-full disabled:text-white"
+                  type="submit"
+                >
+                  {loading ? "Loading..." : "Login"}
                 </button>
               </div>
             </form>

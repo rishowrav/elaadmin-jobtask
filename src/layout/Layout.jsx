@@ -1,13 +1,25 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 const Layout = () => {
+  const location = useLocation();
+
   return (
     <div>
-      <Header />
+      {location.pathname === "/register" || location.pathname === "/login" ? (
+        ""
+      ) : (
+        <Header />
+      )}
+
       <Outlet />
-      <Footer />
+
+      {location.pathname === "/register" || location.pathname === "/login" ? (
+        ""
+      ) : (
+        <Footer />
+      )}
     </div>
   );
 };
