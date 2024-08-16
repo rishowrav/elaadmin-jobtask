@@ -3,7 +3,6 @@ import { FaChevronDown } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
 import Card from "../components/Card";
 import Pagination from "../components/Pagination";
-import axios from "axios";
 import useAxiosPublic from "../hooks/useAxiosPublic";
 
 const Home = () => {
@@ -12,20 +11,20 @@ const Home = () => {
   const [datas, setDatas] = useState([]);
   const [category, setCategory] = useState("");
   const [search, setSearch] = useState("");
+  const [currentPage, setCurrentPage] = useState(0);
+  const [itemsPerPage, setItemsPerPage] = useState(8);
   const axiosPublic = useAxiosPublic();
-
-  console.log(search);
 
   useEffect(() => {
     dataFeatching();
-  }, [toggle, category, search]);
+  }, [toggle, category, search, currentPage, itemsPerPage]);
 
   const dataFeatching = async () => {
     try {
       const { data } = await axiosPublic.get(
         `/products?sort=${
           toggle ? "asc" : "desc"
-        }&category=${category}&search=${search}`
+        }&category=${category}&search=${search}&currentPage=${currentPage}&size=${itemsPerPage}`
       );
       setLoading(true);
       setDatas(data);
@@ -35,6 +34,8 @@ const Home = () => {
       setLoading(false);
     }
   };
+
+  console.log(currentPage);
 
   return (
     <main className="mx-auto container space-y-10 mb-20">
@@ -136,7 +137,11 @@ const Home = () => {
       )}
 
       <section className="flex justify-center">
-        <Pagination />
+        <Pagination
+          setCurrentPage={setCurrentPage}
+          itemsPerPage={itemsPerPage}
+          currentPage={currentPage}
+        />
       </section>
     </main>
   );
