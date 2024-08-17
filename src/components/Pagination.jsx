@@ -1,18 +1,26 @@
 import React, { useEffect, useState } from "react";
 import useAxiosPublic from "../hooks/useAxiosPublic";
 
-const Pagination = ({ setCurrentPage, itemsPerPage, currentPage }) => {
+const Pagination = ({
+  setCurrentPage,
+  itemsPerPage,
+  currentPage,
+  category,
+  search,
+}) => {
   const [count, setCount] = useState(0);
   const axiosPublic = useAxiosPublic();
 
   useEffect(() => {
     const getData = async () => {
-      const { data } = await axiosPublic.get(`/products-count`);
+      const { data } = await axiosPublic.get(
+        `/products-count?category=${category}&search=${search}`
+      );
       setCount(data.productLength);
     };
 
     getData();
-  }, []);
+  }, [category, search]);
 
   const numberOfPages = Math.ceil(count / itemsPerPage);
   const pages = [...Array(numberOfPages).keys()].map((index) => index + 1);
@@ -42,11 +50,10 @@ const Pagination = ({ setCurrentPage, itemsPerPage, currentPage }) => {
             <li onClick={() => setCurrentPage(page)} key={page}>
               <a
                 className={`${
-                  currentPage == +page ? "bg-blue-600 text-white" : ""
-                } flex cursor-pointer hover:bg-blue-500 hover:text-white  items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300   `}
+                  currentPage == +page ? "bg-blue-600 text-white" : "bg-white"
+                } flex cursor-pointer hover:bg-blue-500 hover:text-white  items-center justify-center px-4 h-10 leading-tight text-gray-500  border border-gray-300   `}
               >
                 {page}
-                {console.log({ currentPage, page })}
               </a>
             </li>
           );

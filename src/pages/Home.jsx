@@ -50,7 +50,10 @@ const Home = () => {
                     ? "bg-gray-500 text-white hover:text-black "
                     : ""
                 }`}
-                onClick={() => setCategory("")}
+                onClick={() => {
+                  setCategory("");
+                  setCurrentPage(1);
+                }}
               >
                 All
               </a>
@@ -62,7 +65,10 @@ const Home = () => {
                     ? "bg-gray-500 text-white hover:text-black "
                     : ""
                 }`}
-                onClick={() => setCategory("Iphone")}
+                onClick={() => {
+                  setCategory("Iphone");
+                  setCurrentPage(1);
+                }}
               >
                 Iphone
               </a>
@@ -74,7 +80,10 @@ const Home = () => {
                     ? "bg-gray-500 text-white hover:text-black"
                     : ""
                 }`}
-                onClick={() => setCategory("Samsung")}
+                onClick={() => {
+                  setCategory("Samsung");
+                  setCurrentPage(1);
+                }}
               >
                 Samsung Galaxy
               </a>
@@ -86,7 +95,9 @@ const Home = () => {
                     ? "bg-gray-500 text-white hover:text-black"
                     : ""
                 }`}
-                onClick={() => setCategory("Oppo")}
+                onClick={() => {
+                  setCategory("Oppo");
+                }}
               >
                 Oppo
               </a>
@@ -98,7 +109,10 @@ const Home = () => {
                     ? "bg-gray-500 text-white hover:text-black"
                     : ""
                 }`}
-                onClick={() => setCategory("Google Pixel")}
+                onClick={() => {
+                  setCategory("Google Pixel");
+                  setCurrentPage(1);
+                }}
               >
                 Google Pixel
               </a>
@@ -106,15 +120,30 @@ const Home = () => {
           </ul>
         </details>
 
-        <label className="input input-bordered  flex items-center gap-4 flex-1">
-          <IoSearch className="text-2xl text-gray-500" />
-          <input
-            onChange={(e) => setSearch(e.target.value)}
-            type="text"
-            className="grow h-12"
-            placeholder="Search..."
-          />
-        </label>
+        <form
+          className="flex "
+          onSubmit={(e) => {
+            e.preventDefault();
+            setSearch(e.target.search.value);
+            setCurrentPage(1);
+          }}
+        >
+          <label className="input rounded-r-none input-bordered  flex items-center gap-4 flex-1">
+            <IoSearch className="text-2xl text-gray-500" />
+            <input
+              name="search"
+              type="text"
+              className="grow h-12"
+              placeholder="Search..."
+            />
+          </label>
+          <button
+            type="submit"
+            className="btn rounded-l-none btn-primary text-lg"
+          >
+            Search
+          </button>
+        </form>
 
         <button
           onClick={() => setToggle(!toggle)}
@@ -139,6 +168,8 @@ const Home = () => {
           setCurrentPage={setCurrentPage}
           itemsPerPage={itemsPerPage}
           currentPage={currentPage}
+          category={category}
+          search={search}
         />
       </section>
     </main>
