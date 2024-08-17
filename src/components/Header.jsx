@@ -7,6 +7,7 @@ const Header = () => {
   const { logOut, currentUser } = useContext(authContext);
   const navigate = useNavigate();
 
+  // Log Out state
   const handleLogout = () => {
     logOut()
       .then(() => {

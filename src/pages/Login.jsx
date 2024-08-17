@@ -5,8 +5,7 @@ import { authContext } from "../authProvider/AuthProvider";
 import toast from "react-hot-toast";
 
 const Login = () => {
-  const { loginEmailPassword, currentUser, googleLogin } =
-    useContext(authContext);
+  const { loginEmailPassword, googleLogin } = useContext(authContext);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
@@ -17,9 +16,9 @@ const Login = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
 
+    // Login with Email and Password state
     loginEmailPassword(email, password)
       .then((userCredentials) => {
-        console.log(userCredentials.user);
         toast.success("login successful");
         navigate("/");
         setLoading(false);
@@ -51,6 +50,7 @@ const Login = () => {
   return (
     <section className="bg-gray-50">
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+        {/* Logo */}
         <Link to="/" className="flex items-center mb-6 text-2xl font-semibold ">
           <img className="w-32 mr-2" src="logo.webp" alt="logo" />
         </Link>
@@ -59,6 +59,8 @@ const Login = () => {
             <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl ">
               Login in to your account
             </h1>
+
+            {/* Login From */}
             <form
               onSubmit={handleSubmit}
               className="space-y-4 md:space-y-6"

@@ -39,6 +39,7 @@ const Home = () => {
   return (
     <main className="mx-auto container space-y-10 mb-20">
       <section className="flex lg:flex-row flex-col justify-around gap-4 lg:gap-0 mt-10 mx-auto lg:w-[900px] ">
+        {/* Category  */}
         <details className="dropdown">
           <summary className="btn  w-full  btn-accent text-lg flex items-center justify-center ">
             Categorize <FaChevronDown />
@@ -121,6 +122,7 @@ const Home = () => {
           </ul>
         </details>
 
+        {/* Search input */}
         <form
           className="flex "
           onSubmit={(e) => {
@@ -148,6 +150,7 @@ const Home = () => {
           </button>
         </form>
 
+        {/* Price Sorting */}
         <button
           onClick={() => setToggle(!toggle)}
           className="btn text-lg btn-info "
@@ -155,6 +158,7 @@ const Home = () => {
           Price: {toggle ? "Low to High" : "High to Low"}
         </button>
 
+        {/* Reset Button */}
         <button
           onClick={() => {
             setCategory("");
@@ -168,6 +172,7 @@ const Home = () => {
         </button>
       </section>
 
+      {/* All Products and Loading State */}
       {loading ? (
         <h1 className="text-4xl font-bold text-center">Loading...</h1>
       ) : (
@@ -178,6 +183,7 @@ const Home = () => {
         </section>
       )}
 
+      {/* Pagination section */}
       <section className="flex justify-center">
         <Pagination
           setCurrentPage={setCurrentPage}
