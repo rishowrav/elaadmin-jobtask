@@ -11,6 +11,7 @@ const Home = () => {
   const [datas, setDatas] = useState([]);
   const [category, setCategory] = useState("");
   const [search, setSearch] = useState("");
+  const [searchText, setSearchText] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(8);
   const axiosPublic = useAxiosPublic();
@@ -37,7 +38,7 @@ const Home = () => {
 
   return (
     <main className="mx-auto container space-y-10 mb-20">
-      <section className="flex lg:flex-row flex-col justify-between lg:gap-10 gap-4 mt-10 mx-auto lg:w-[800px] ">
+      <section className="flex lg:flex-row flex-col justify-around gap-4 lg:gap-0 mt-10 mx-auto lg:w-[900px] ">
         <details className="dropdown">
           <summary className="btn  w-full  btn-accent text-lg flex items-center justify-center ">
             Categorize <FaChevronDown />
@@ -131,6 +132,8 @@ const Home = () => {
           <label className="input rounded-r-none input-bordered  flex items-center gap-4 flex-1">
             <IoSearch className="text-2xl text-gray-500" />
             <input
+              onChange={(e) => setSearchText(e.target.value)}
+              value={searchText}
               name="search"
               type="text"
               className="grow h-12"
@@ -150,6 +153,18 @@ const Home = () => {
           className="btn text-lg btn-info "
         >
           Price: {toggle ? "Low to High" : "High to Low"}
+        </button>
+
+        <button
+          onClick={() => {
+            setCategory("");
+            setSearch("");
+            setCurrentPage(1);
+            setSearchText("");
+          }}
+          className="btn bg-red-600 text-white text-lg"
+        >
+          Reset
         </button>
       </section>
 
