@@ -11,7 +11,7 @@ const Home = () => {
   const [datas, setDatas] = useState([]);
   const [category, setCategory] = useState("");
   const [search, setSearch] = useState("");
-  const [currentPage, setCurrentPage] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(8);
   const axiosPublic = useAxiosPublic();
 
@@ -34,8 +34,6 @@ const Home = () => {
       setLoading(false);
     }
   };
-
-  console.log(currentPage);
 
   return (
     <main className="mx-auto container space-y-10 mb-20">
